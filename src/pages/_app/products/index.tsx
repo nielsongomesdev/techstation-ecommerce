@@ -15,7 +15,7 @@ function RouteComponent() {
       <h1 className=" text-3xl text-center mb-3">Lista de produtos</h1>
 
       <h2 className="text-center mb-10 p-4">
-        Conforto expecional para suas aventuras do dia-a-dia
+        Equipamentos de alta performance para elevar o nível do seu setup.
       </h2>
 
       {products.length === 0 ? (

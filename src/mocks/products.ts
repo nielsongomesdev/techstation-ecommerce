@@ -1,9 +1,9 @@
-import tecladoMecanico from "@/assets/images/teclado-mecanico.jpg";
-import mouseErgonomico from "@/assets/images/mouse-ergonomico.jpg";
-import monitorUltrawide from "@/assets/images/monitor-ultrawide.jpg";
-import headsetStudio from "@/assets/images/headset-studio.jpg";
-import deskpadCouro from "@/assets/images/deskpad-couro.jpg";
-import suporteMonitor from "@/assets/images/suporte-monitor.jpg";
+import tecladoMecanico from "@/assets/images/teclado-mecanico.png";
+import mouseErgonomico from "@/assets/images/mouse-ergonomico.png";
+import monitorUltrawide from "@/assets/images/monitor-ultrawide.png";
+import headsetStudio from "@/assets/images/headset-studio.png";
+import deskpadCouro from "@/assets/images/deskpad-couro.png";
+import suporteMonitor from "@/assets/images/suporte-monitor.png";
 
 export const products = [
   {
