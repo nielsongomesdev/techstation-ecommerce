@@ -1,4 +1,5 @@
 import IconUser from "@/assets/images/icon-user.png";
+import LogoImage from "@/assets/images/logo.png";
 import { Link } from "@tanstack/react-router";
 import { MenuMobile } from "../MenuMobile";
 import { CartButton } from "../CartButton";
@@ -22,11 +23,23 @@ export const Header = () => {
   return (
     <div className="relative">
       <header className="fixed top-5 left-0 right-0 z-10 mx-10">
-        <div className="bg-white text-black max-w-[1320px] mx-auto flex justify-between items-center py-3 px-7 rounded-2xl mt-5">
-          <Link to="/">
-            <span className="text-2xl md:text-3xl font-extrabold tracking-tight text-black">
-              TechStation
-            </span>
+        <div className="bg-white text-black max-w-330 mx-auto flex justify-between items-center py-3 px-7 rounded-2xl mt-5">
+          <Link to="/" className="flex items-center shrink-0">
+            <span
+              role="img"
+              aria-label="Logo TechStation"
+              className="block h-10 w-36 bg-primary"
+              style={{
+                WebkitMaskImage: `url(${LogoImage})`,
+                maskImage: `url(${LogoImage})`,
+                WebkitMaskRepeat: "no-repeat",
+                maskRepeat: "no-repeat",
+                WebkitMaskPosition: "center",
+                maskPosition: "center",
+                WebkitMaskSize: "contain",
+                maskSize: "contain",
+              }}
+            />
           </Link>
 
           <nav className="hidden lg:block">

@@ -61,14 +61,16 @@ function RouteComponent() {
         <span className="font-semibold">{filteredProduct?.name}</span>
       </nav>
 
-      <div className="flex justify-center gap-10">
-        <img
-          src={filteredProduct?.image}
-          alt={filteredProduct?.name}
-          className="w-[500px] bg-white rounded-2xl"
-        />
+      <div className="flex flex-col lg:flex-row justify-center items-start gap-10">
+        <div className="w-full lg:w-125 aspect-square bg-white rounded-2xl p-4 flex items-center justify-center shrink-0">
+          <img
+            src={filteredProduct?.image}
+            alt={filteredProduct?.name}
+            className="w-full h-full object-contain"
+          />
+        </div>
 
-        <div className="text-black">
+        <div className="text-black w-full max-w-140">
           <h1 className="text-4xl font-bold mb-1">{filteredProduct?.name}</h1>
 
           <p className="mb-2">Cor: {filteredProduct?.color}</p>
@@ -92,7 +94,7 @@ function RouteComponent() {
             </span>
           </p>
 
-          <p className="max-w-[500px] my-5">{filteredProduct?.description}</p>
+          <p className="max-w-125 my-5">{filteredProduct?.description}</p>
 
           <div className="mb-6">
             <p className="text-sm">Calcular o prazo de entrega</p>

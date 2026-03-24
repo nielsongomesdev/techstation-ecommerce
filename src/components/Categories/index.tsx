@@ -10,18 +10,25 @@ export const Categories = () => {
       {categories.map((category, index) => (
         <div
           key={index}
-          style={{ backgroundImage: `url(${category.image})` }}
-          className="h-125 bg-cover bg-center rounded-[20px] relative flex items-center justify-center text-white shrink-0 w-[95%] md:w-1/2 lg:w-full"
+          className="h-125 rounded-[20px] relative flex items-center justify-center text-white shrink-0 w-[95%] md:w-1/2 lg:w-full overflow-hidden bg-white"
         >
-          <div className="absolute inset-0 bg-black/30 rounded-[20px] snap-center"></div>
+          <img
+            src={category.image}
+            alt={`Categoria ${category.name}`}
+            loading="lazy"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-contain p-3"
+          />
 
-          <div className="relative">
+          <div className="absolute inset-0 bg-black/25 rounded-[20px] snap-center"></div>
+
+          <div className="relative z-10">
             <Button
               variant="secondary"
               onClick={() =>
                 router.navigate({
                   to: "/products/category/$category",
-                  params: { category: category.name.toLowerCase() },
+                  params: { category: category.slug },
                 })
               }
             >

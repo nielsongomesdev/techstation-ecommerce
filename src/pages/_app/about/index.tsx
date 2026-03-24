@@ -15,6 +15,7 @@ function RouteComponent() {
         <img
           src={bannerAbout}
           alt="Profissional em estação de trabalho com equipamentos tech"
+          decoding="async"
           className="size-full object-cover"
         />
       </div>

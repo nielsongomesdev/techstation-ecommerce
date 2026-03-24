@@ -16,6 +16,7 @@ function RouteComponent() {
       <img
         src={OurStoresBanner}
         alt="Banner da loja TechStation com equipamentos de setup"
+        decoding="async"
         className="rounded-[20px] h-80 md:h-125 object-cover w-full"
       />
 
@@ -39,7 +40,9 @@ function RouteComponent() {
 
             <img
               src={OurStoresImg1}
-              alt="Imagem de um tênis da loja"
+              alt="Setup gamer em exibição na loja TechStation"
+              loading="lazy"
+              decoding="async"
               className="rounded-[20px] md:max-w-[42vw] aspect-10/7 object-cover size-full"
             />
           </div>
@@ -47,7 +50,9 @@ function RouteComponent() {
           <div className="flex flex-col md:flex-row items-center gap-2.5">
             <img
               src={OurStoresImg2}
-              alt="Imagem de um tênis da loja"
+              alt="Área de experiência com periféricos na loja TechStation"
+              loading="lazy"
+              decoding="async"
               className="rounded-[20px] md:max-w-[42vw] aspect-10/7 object-cover size-full"
             />
 

@@ -12,24 +12,29 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   const { addToCart } = useContext(CartContext);
 
   return (
-    <div className="bg-white rounded-2xl shadow-md">
+    <div className="bg-white rounded-2xl shadow-md h-full flex flex-col overflow-hidden">
       <Link
         to="/products/$productId"
         params={{ productId: String(product.id) }}
+        className="block bg-surface"
       >
-        <img
-          className="w-full max-h-[400px] object-cover rounded-md mb-2"
-          src={product.image}
-          alt={product.name}
-        />
+        <div className="aspect-4/3 p-4 flex items-center justify-center">
+          <img
+            className="w-full h-full object-contain"
+            src={product.image}
+            alt={product.name}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
       </Link>
 
-      <div className="text-black rounded-2xl p-4">
-        <h3 className="text-lg font-semibold">{product.name}</h3>
+      <div className="text-black p-4 flex flex-col flex-1">
+        <h3 className="text-lg font-semibold min-h-16">{product.name}</h3>
 
-        <p>{product.color}</p>
+        <p className="mb-2">{product.color}</p>
 
-        <div className="flex justify-between mt-2.5">
+        <div className="flex justify-between mt-auto">
           <p className="font-bold">R${product.price},00</p>
 
           <button className="cursor-pointer" onClick={() => addToCart(product)}>

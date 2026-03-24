@@ -12,11 +12,13 @@ export const Hero = () => {
         <img
           src={Banner}
           alt="Setup TechStation com monitor e periféricos"
+          loading="eager"
+          decoding="async"
           className="w-full h-full object-cover rounded-[20px]"
         />
 
         <Overlay
-          title="Kripton One"
+          title=""
           subtitle="Performance extrema para o seu setup."
           className="bottom-0 px-6 md:px-24 pb-24 justify-end md:items-end"
         >

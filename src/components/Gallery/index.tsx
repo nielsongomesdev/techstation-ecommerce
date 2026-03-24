@@ -22,35 +22,24 @@ export const Gallery = () => {
             className="w-full h-full object-cover"
             src={galeriaTech1}
             alt="Estação de trabalho premium com setup completo"
+            loading="lazy"
+            decoding="async"
           />
 
           <Overlay
-            title="Kripton One"
+            title=""
             subtitle="Design pensado nos mínimos detalhes"
             className="inset-0 justify-center"
           >
-            <Button
-              variant="secondary"
-              onClick={() =>
-                router.navigate({
-                  to: "/products/category/$category",
-                  params: { category: "teclados" },
-                })
-              }
-            >
-              Ver Teclados
-            </Button>
-            <Button
-              variant="secondary"
-              onClick={() =>
-                router.navigate({
-                  to: "/products/category/$category",
-                  params: { category: "mouses" },
-                })
-              }
-            >
-              Ver Mouses
-            </Button>
+            <div className="w-full flex justify-center">
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick={() => router.navigate({ to: "/products" })}
+              >
+                Explorar produtos
+              </Button>
+            </div>
           </Overlay>
         </div>
 
@@ -61,6 +50,8 @@ export const Gallery = () => {
             className="w-full h-full object-cover"
             src={galeriaTech2}
             alt="Teclado mecânico com iluminação"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -71,6 +62,8 @@ export const Gallery = () => {
             className="w-full h-full object-cover"
             src={galeriaTech3}
             alt="Mouse ergonômico em mesa minimalista"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -81,6 +74,8 @@ export const Gallery = () => {
             className="w-full h-full object-cover"
             src={galeriaTech4}
             alt="Monitor ultrawide com ambiente de programação"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -91,6 +86,8 @@ export const Gallery = () => {
             className="w-full h-full object-cover"
             src={galeriaTech5}
             alt="Headset e acessórios de áudio para produtividade"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -101,6 +98,8 @@ export const Gallery = () => {
             className="w-full h-full object-cover"
             src={galeriaTech6}
             alt="Setup clean com monitor e periféricos"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

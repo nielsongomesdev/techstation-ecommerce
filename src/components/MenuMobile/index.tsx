@@ -45,7 +45,7 @@ export const MenuMobile = ({ navLinks }: MenuMobileProps) => {
             </nav>
           </header>
 
-          <ul className="p-4 overflow-y-auto scrollbar-hide h-[calc(100%_-_140px)] flex flex-col gap-3">
+          <ul className="p-4 overflow-y-auto scrollbar-hide h-[calc(100%-140px)] flex flex-col gap-3">
             {navLinks.map((link) => (
               <Link
                 to={link.href}

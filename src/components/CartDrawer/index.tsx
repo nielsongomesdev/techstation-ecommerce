@@ -33,7 +33,7 @@ export const CartDrawer = ({ isOpen, onClose }: CartDrawerProps) => {
             </button>
           </header>
 
-          <ul className="p-4 overflow-y-auto scrollbar-hide h-[calc(100%_-_140px)] flex flex-col gap-3">
+          <ul className="p-4 overflow-y-auto scrollbar-hide h-[calc(100%-140px)] flex flex-col gap-3">
             {cart.map((product) => (
               <li key={product.id} className="flex flex-col gap-1 pr-2">
                 <button
@@ -44,11 +44,15 @@ export const CartDrawer = ({ isOpen, onClose }: CartDrawerProps) => {
                 </button>
 
                 <div className="flex gap-4">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-24 h-24 md:w-32 md:h-32"
-                  />
+                  <div className="w-24 h-24 md:w-32 md:h-32 bg-surface rounded-md p-2 flex items-center justify-center shrink-0">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
 
                   <div className="flex flex-col items-start">
                     <p className="mb-1 text-sm">{product.name}</p>
@@ -84,7 +88,7 @@ export const CartDrawer = ({ isOpen, onClose }: CartDrawerProps) => {
             ))}
           </ul>
 
-          <footer className="absolute bottom-0 w-full h-[100px] p-4">
+          <footer className="absolute bottom-0 w-full h-25 p-4">
             <button className="w-full h-full bg-black text-white rounded-xs cursor-pointer hover:bg-gray-800">
               Fechar pedido
             </button>
