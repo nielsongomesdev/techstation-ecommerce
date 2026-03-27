@@ -42,6 +42,10 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     setCart(newCart);
   }
 
+  function clearCart(): void {
+    setCart([]);
+  }
+
   function removeFromCart(productId: number): void {
     setCart(cart.filter((itemInCart) => itemInCart.id !== productId));
   }
@@ -80,6 +84,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
       value={{
         cart,
         addToCart,
+        clearCart,
         removeFromCart,
         incrementInCart,
         decrementInCart,

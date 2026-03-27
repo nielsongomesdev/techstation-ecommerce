@@ -148,7 +148,7 @@ function RouteComponent() {
   
 
   return (
-    <section className="container pt-44 md:pt-54 pb-10 md:px-10 mb-10 flex flex-col items-center justify-center text-black min-h-[80vh]">
+    <section className="container pt-44 md:pt-54 pb-10 md:px-10 mb-10 text-black min-h-[80vh]">
       <h1 className=" text-3xl text-center mb-3">Lista de produtos</h1>
 
       <h2 className="text-center mb-10 p-4">
@@ -176,13 +176,15 @@ function RouteComponent() {
           <ProductList products={products} />
 
           {hasMore && (
-            <button
-              className="bg-[#212A2F] py-3.5 px-7 rounded-xl cursor-pointer mx-auto text-white disabled:opacity-50 disabled:cursor-not-allowed"
-              onClick={loadMore}
-              disabled={loading}
-            >
-              {loading ? "Carregando..." : "Carregar mais"}
-            </button>
+            <div className="w-full flex justify-center">
+              <button
+                className="bg-[#212A2F] py-3.5 px-7 rounded-xl cursor-pointer text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                onClick={loadMore}
+                disabled={loading}
+              >
+                {loading ? "Carregando..." : "Carregar mais"}
+              </button>
+            </div>
           )}
         </>
       )}

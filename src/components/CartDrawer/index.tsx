@@ -8,8 +8,13 @@ interface CartDrawerProps {
 }
 
 export const CartDrawer = ({ isOpen, onClose }: CartDrawerProps) => {
-  const { cart, removeFromCart, incrementInCart, decrementInCart } =
+  const { cart, clearCart, removeFromCart, incrementInCart, decrementInCart } =
     useContext(CartContext);
+
+  const handleCheckout = () => {
+    alert("Pedido recebido com sucesso! Seu carrinho foi limpo para novas simulações.");
+    clearCart();
+  };
 
   return (
     <>
@@ -89,7 +94,10 @@ export const CartDrawer = ({ isOpen, onClose }: CartDrawerProps) => {
           </ul>
 
           <footer className="absolute bottom-0 w-full h-25 p-4">
-            <button className="w-full h-full bg-black text-white rounded-xs cursor-pointer hover:bg-gray-800">
+            <button
+              className="w-full h-full bg-black text-white rounded-xs cursor-pointer hover:bg-gray-800"
+              onClick={handleCheckout}
+            >
               Fechar pedido
             </button>
           </footer>

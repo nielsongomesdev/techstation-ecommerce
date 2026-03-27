@@ -1,7 +1,7 @@
 import Banner from "@/assets/images/banner-tech.png";
 import { Button } from "../Button";
 import { Overlay } from "../Overlay";
-import { useRouter } from "@tanstack/react-router";
+import { Link, useRouter } from "@tanstack/react-router";
 
 export const Hero = () => {
   const router = useRouter();
@@ -28,7 +28,13 @@ export const Hero = () => {
           >
             Ver modelos
           </Button>
-          <Button>Comprar</Button>
+          <Link
+            to="/products/$productId"
+            params={{ productId: "1" }}
+            className="flex justify-center items-center gap-2 text-nowrap leading-none hover:cursor-pointer transition-colors duration-200 font-medium rounded-full transition py-2.5 bg-white text-primary hover:bg-gray-100 px-8"
+          >
+            Comprar agora
+          </Link>
         </Overlay>
       </section>
     </div>
