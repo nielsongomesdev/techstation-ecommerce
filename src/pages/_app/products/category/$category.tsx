@@ -4,6 +4,8 @@ import { getCategoryBySlug } from "../../../../services/categoryService";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Product } from "../../../../interfaces/product";
 
+const API_BASE_URL = "https://techstation-api.onrender.com";
+
 export const Route = createFileRoute("/_app/products/category/$category")({
   loader: async ({ params }) => {
     const category = await getCategoryBySlug(params.category);
@@ -50,7 +52,7 @@ function RouteComponent() {
       queryParams.set("limit", "3");
       queryParams.set("categorySlug", categorySlug);
 
-      const response = await fetch(`http://localhost:3000/products?${queryParams.toString()}`, {
+      const response = await fetch(`${API_BASE_URL}/products?${queryParams.toString()}`, {
         signal: controller.signal,
       });
 
@@ -105,7 +107,7 @@ function RouteComponent() {
         queryParams.set("limit", "3");
         queryParams.set("categorySlug", categorySlug);
 
-        const res = await fetch(`http://localhost:3000/products?${queryParams.toString()}`, {
+        const res = await fetch(`${API_BASE_URL}/products?${queryParams.toString()}`, {
           signal: controller.signal,
         });
         if (!res.ok) throw new Error(`Erro ao buscar produtos: ${res.statusText}`);
